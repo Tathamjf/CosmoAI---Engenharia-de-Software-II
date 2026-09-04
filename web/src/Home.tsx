@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 export function Index() {
@@ -8,10 +8,11 @@ export function Index() {
       <header className="navbar">
         <div className="logo">CosmoAI</div>
         <nav className="nav-links">
-          <a href="#ia-no-espaco">IA no Espaço</a>
-          <a href="#o-que-ver">O Que Ver no Céu</a>
-          <a href="#sobre">Sobre</a>
-          <button className="btn-explore">Explore!</button>
+          <Link to="/">Home</Link>
+          <Link to="/sobre">Sobre</Link>
+          <Link to="/explore">
+            <button className="btn-explore">Explore!</button>
+          </Link>
         </nav>
       </header>
 
@@ -36,6 +37,6 @@ export function Index() {
       </main>
     </div>
   );
-};
+}
 
 export default Index;
